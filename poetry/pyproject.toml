@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pytorch-geometric"
+version = "0.1.0"
+description = ""
+authors = ["Harsh Vardhan <openroad@chez-vardhan.com>"]
+readme = "README.md"
+packages = [{include = "pytorch_geometric"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch-geometric = "^2.2.0"
+torch = "^1.13.1"
+jupyterlab = "^3.6.1"
+poethepoet = "^0.18.1"
+yacs = "^0.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+torch_sparse="pip install torch_sparse torch_scatter"
+
+
